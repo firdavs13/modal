@@ -61,7 +61,6 @@ p {
 /* -------------------------- */
 /* CLASSES TO MAKE MODAL WORK */
 
-
 .hidden {
   display: none;
 }
@@ -91,4 +90,28 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+@keyframes appear {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.modal {
+  animation: appear 600ms ease-in 1;
+}
+
+@keyframes color {
+  0%    { opacity: 0; }
+  25%   { opacity: 0.3; }
+  50%   { opacity: 0.4; }
+  75%   { opacity: 0.5; }
+}
+
+.overlay {
+  animation: color 600ms ease-in 1;
 }
